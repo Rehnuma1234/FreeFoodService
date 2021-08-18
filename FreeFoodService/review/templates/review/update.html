@@ -1,0 +1,23 @@
+{% extends 'review/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="header" style="display: flex; justify-content: center; align-items: center;">
+    <h1 class="h1 mt-3 mb-2" style="border-bottom: 2px solid black; width: 50%; text-align: center; padding: 10px;">Update Review</h1>
+</div>
+
+<div class="container">
+
+    <form method="post">
+        
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" class="btn btn-primary mt-3" value="Update">
+        
+    </form>
+
+
+
+</div>
+
+{% endblock %}
